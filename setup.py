@@ -3,8 +3,11 @@ from setuptools import setup
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
+with open('requirements.txt') as f:
+    requirements = f.read().splitlines()
+
 setup(
-    name="package_name_i_think_it_is_the_import_name_not_sure",
+    name="package_name_probably_on_pip",
     version="1.0.0",
     description="description",
     long_description=long_description,
@@ -20,9 +23,5 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    install_requires=[
-        "required",
-        "pypi",
-        "packages",
-    ],
+    install_requires=requirements,
 )
