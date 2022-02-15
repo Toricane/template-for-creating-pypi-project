@@ -3,9 +3,6 @@ from setuptools import setup
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
-with open('requirements.txt') as f:
-    requirements = f.read().splitlines()
-
 setup(
     name="package_name_probably_on_pip",
     version="1.0.0",
@@ -23,5 +20,9 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    install_requires=requirements,
+    install_requires=[
+        "your",
+        "package",
+        "requirements",
+    ],
 )
